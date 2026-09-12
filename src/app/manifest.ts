@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getSetting } from "@/lib/queries";
 
+export const dynamic = "force-dynamic";
+
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
   const logo = await getSetting("app_logo");
 
